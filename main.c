@@ -4,7 +4,7 @@
 #include "libs/TADbst.h"
 int main() {
     tipoApontador no;
-    int info, opcao;
+    int info, opcao, valor;
     inicializaTAD(&no);
     printf("Digite um valor a ser inserido na árvore: (int) ");
     scanf("%d", &info);
@@ -32,6 +32,12 @@ int main() {
             printf("Opção inválida!");
             return 0;
         }
+    }
+    printf("Digite um número para pesquisa: (int)");
+    scanf("%d", &valor);
+    while(valor != 0){
+        pesquisaTAD(&no, valor);
+        return 0;
     }
     return 0;
 }

@@ -27,6 +27,21 @@ void insereTAD(tipoApontador *no, int info){
     }
 }
 
+void pesquisaTAD(tipoApontador *no, int info){
+    if(*no == NULL){
+        printf("Erro: Valor não encontrado!\n");
+        return;
+    }
+    if(info < (*no)->chave){
+        pesquisaTAD(&(*no)->left, info);
+    }
+    if(info > (*no)->chave){
+        pesquisaTAD(&(*no)->left, info);
+    } else {
+        printf("Encontrado!");
+    }
+}
+
 void ordem(tipoApontador no){
     if(no == NULL) return;
     ordem(no->left);

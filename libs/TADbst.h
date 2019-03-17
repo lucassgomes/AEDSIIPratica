@@ -17,6 +17,8 @@ void inicializaTAD(tipoApontador *no);
 
 void insereTAD(tipoApontador *no, int info);
 
+void pesquisaTAD(tipoApontador *no, int info);
+
 void ordem(tipoApontador no);
 
 void preordem(tipoApontador no);
